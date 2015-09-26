@@ -3,7 +3,7 @@
                          Fall Quarter 2015
                    Eastern Washington University
 
-Group: #########
+Group: The Bynars
 
 Alexis Guches
 Travis Heppner
