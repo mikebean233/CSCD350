@@ -1,6 +1,8 @@
-import java.util.*
+import java.util.*;
 import java.util.Scanner;
 import java.io.File;
+import java.io.PrintStream;
+import java.lang.System;
 
 public class TestInputGenerator
 {
@@ -9,16 +11,16 @@ public class TestInputGenerator
 	private File    _inputFileObject;
 	private File    _outputFileObject;
 
-	private String  _inputFilename;
-	private String  _inputFileName
+	private String  _inputFileName;
+	private String  _outputFileName;
 
-	public static int main(String [] args)
+	public static int main(String [] args) throws Exception
 	{
  		String thisInputFilename = "";
 
- 		if(args == null || args.length() < 2)
+ 		if(args == null || args.length < 2)
  		{
- 			System.err.printLine("Usage: java TestInputGenerator INPUTFILE OUTPUTFILE");
+ 			System.err.println("Usage: java TestInputGenerator INPUTFILE OUTPUTFILE");
  			return 1;
 		}
  		
@@ -30,13 +32,13 @@ public class TestInputGenerator
 		}
 		catch(Exception e)
 		{
-			System.err.printLine(e.getMessge());
+			System.err.println(e.getMessage());
 			return 2;
 		}
 		return 0;
 	}
 
-	public static TestInputGenerator(String inputFileName, String outputFileName)
+	public TestInputGenerator(String inputFileName, String outputFileName) throws Exception
 	{
 		if(inputFileName == null || inputFileName.isEmpty())
 			throw new TestInputGeneratorException("a input filename was not specified");
@@ -51,7 +53,7 @@ public class TestInputGenerator
 			_thisScanner = new Scanner(_inputFileObject);
 			_thisPrintStream = new PrintStream(_outputFileObject);
 		}
-		Catch(Exception e)
+		catch(Exception e)
 		{
 			throw new TestInputGeneratorException(e.getMessage());
 		}
@@ -63,7 +65,7 @@ public class TestInputGenerator
 	}
 
 
-	public class TestInputGeneratorException Extends Exception
+	public class TestInputGeneratorException extends Exception
 	{
 		public TestInputGeneratorException(String message)
 		{
