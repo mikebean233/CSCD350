@@ -1,0 +1,6 @@
+c:\users\travis\documents\visual studio 2013\Projects\Assignment2_minsweeper\Assignment2_minsweeper\bin\Debug\Assignment2_minsweeper.exe.config
+c:\users\travis\documents\visual studio 2013\Projects\Assignment2_minsweeper\Assignment2_minsweeper\bin\Debug\Assignment2_minsweeper.exe
+c:\users\travis\documents\visual studio 2013\Projects\Assignment2_minsweeper\Assignment2_minsweeper\bin\Debug\Assignment2_minsweeper.pdb
+c:\users\travis\documents\visual studio 2013\Projects\Assignment2_minsweeper\Assignment2_minsweeper\obj\Debug\Assignment2_minsweeper.exe
+c:\users\travis\documents\visual studio 2013\Projects\Assignment2_minsweeper\Assignment2_minsweeper\obj\Debug\Assignment2_minsweeper.pdb
+c:\users\travis\documents\visual studio 2013\Projects\Assignment2_minsweeper\Assignment2_minsweeper\obj\Debug\Assignment2_minsweeper.csprojResolveAssemblyReference.cache
