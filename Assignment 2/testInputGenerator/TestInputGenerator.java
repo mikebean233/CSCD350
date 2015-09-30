@@ -91,6 +91,7 @@ public class TestInputGenerator
 			output += thisMineField.toString(); 
 		}
 		
+		output += "0 0" + System.lineSeparator();
 		_thisPrintStream.print(output);
 	}
 
