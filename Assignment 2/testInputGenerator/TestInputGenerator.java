@@ -1,5 +1,7 @@
-import java.util.*;
+import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
+import java.util.ArrayList;
 import java.io.File;
 import java.io.PrintStream;
 import java.lang.System;
@@ -14,14 +16,17 @@ public class TestInputGenerator
 	private String  _inputFileName;
 	private String  _outputFileName;
 
-	public static int main(String [] args) throws Exception
+	public static void main(String [] args) throws Exception
 	{
- 		String thisInputFilename = "";
-
  		if(args == null || args.length < 2)
  		{
- 			System.err.println("Usage: java TestInputGenerator INPUTFILE OUTPUTFILE");
- 			return 1;
+ 			String output = "Usage: java TestInputGenerator INPUTFILE OUTPUTFILE" + System.lineSeparator();
+ 			output += "input file format:" + System.lineSeparator();
+ 			output += "NoRows NoCols MineProbability" + System.lineSeparator();
+ 			output += "NoRows NoCols MineProbability" + System.lineSeparator();
+ 			
+ 			System.err.println(output);
+ 			System.exit(1);
 		}
  		
  		TestInputGenerator thisGenerator = new TestInputGenerator(args[0], args[1]);
@@ -33,9 +38,9 @@ public class TestInputGenerator
 		catch(Exception e)
 		{
 			System.err.println(e.getMessage());
-			return 2;
+			System.exit(2);
 		}
-		return 0;
+		System.exit(0);
 	}
 
 	public TestInputGenerator(String inputFileName, String outputFileName) throws Exception
@@ -47,9 +52,14 @@ public class TestInputGenerator
 
 		try
 		{
+			_inputFileName = inputFileName;
+			_outputFileName = outputFileName;
+			
 			_inputFileObject = new File(_inputFileName);
 			_outputFileObject = new File(_outputFileName);
 		
+			if(!_outputFileObject.exists())
+				_outputFileObject.createNewFile();
 			_thisScanner = new Scanner(_inputFileObject);
 			_thisPrintStream = new PrintStream(_outputFileObject);
 		}
@@ -61,16 +71,36 @@ public class TestInputGenerator
 
 	public void go()
 	{
-		// TODO: read in input data, generate output, then print the output to the output file.
+		ArrayList<MineField> mineFields = new ArrayList<MineField>();
+		
+		while(_thisScanner.hasNextByte())
+		{
+			String thisLine = _thisScanner.nextLine();
+			String[] tokens = thisLine.split(" ");
+			
+			int rowCount = Integer.parseInt(tokens[0]);
+			int colCount = Integer.parseInt(tokens[1]);
+			int mineProb = Integer.parseInt(tokens[2]);
+			
+			mineFields.add(new MineField(rowCount, colCount, mineProb));
+		}
+		
+		String output = "";
+		for(MineField thisMineField: mineFields)
+		{
+			output += thisMineField.toString(); 
+		}
+		
+		_thisPrintStream.print(output);
 	}
-
 
 	public class TestInputGeneratorException extends Exception
 	{
+		private static final long serialVersionUID = 1L;
+
 		public TestInputGeneratorException(String message)
 		{
 			super(message);
 		}
 	}
-
 }
