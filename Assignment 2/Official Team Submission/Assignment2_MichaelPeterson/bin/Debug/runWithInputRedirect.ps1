@@ -1,0 +1,1 @@
+Get-Content testInput.txt | ./Assignment2_MichaelPeterson.exe
