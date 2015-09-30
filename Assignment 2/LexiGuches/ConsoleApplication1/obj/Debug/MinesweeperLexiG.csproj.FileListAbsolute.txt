@@ -1,1 +1,7 @@
 C:\Users\Lexi\Documents\2015-2016\MinesweeperLexiG\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\Lexi\Documents\2015-2016\SoftwareEngineering\Assignment 2\LexiGuches\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\Lexi\Documents\2015-2016\SoftwareEngineering\Assignment 2\LexiGuches\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\Lexi\Documents\2015-2016\SoftwareEngineering\Assignment 2\LexiGuches\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\Lexi\Documents\2015-2016\SoftwareEngineering\Assignment 2\LexiGuches\ConsoleApplication1\obj\Debug\MinesweeperLexiG.csprojResolveAssemblyReference.cache
+C:\Users\Lexi\Documents\2015-2016\SoftwareEngineering\Assignment 2\LexiGuches\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\Lexi\Documents\2015-2016\SoftwareEngineering\Assignment 2\LexiGuches\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
