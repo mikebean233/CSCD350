@@ -1,0 +1,6 @@
+c:\users\travis\documents\visual studio 2013\Projects\minegenerate\minegenerate\bin\Debug\minegenerate.exe.config
+c:\users\travis\documents\visual studio 2013\Projects\minegenerate\minegenerate\obj\Debug\minegenerate.csprojResolveAssemblyReference.cache
+c:\users\travis\documents\visual studio 2013\Projects\minegenerate\minegenerate\bin\Debug\minegenerate.exe
+c:\users\travis\documents\visual studio 2013\Projects\minegenerate\minegenerate\bin\Debug\minegenerate.pdb
+c:\users\travis\documents\visual studio 2013\Projects\minegenerate\minegenerate\obj\Debug\minegenerate.exe
+c:\users\travis\documents\visual studio 2013\Projects\minegenerate\minegenerate\obj\Debug\minegenerate.pdb
